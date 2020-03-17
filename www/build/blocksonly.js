@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1348:
+/***/ 1359:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,33 +10,33 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(54);
+var _reactDom = __webpack_require__(55);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRedux = __webpack_require__(13);
 
-var _appStateHoc = __webpack_require__(138);
+var _appStateHoc = __webpack_require__(145);
 
 var _appStateHoc2 = _interopRequireDefault(_appStateHoc);
 
-var _controls = __webpack_require__(150);
+var _controls = __webpack_require__(156);
 
 var _controls2 = _interopRequireDefault(_controls);
 
-var _blocks = __webpack_require__(322);
+var _blocks = __webpack_require__(332);
 
 var _blocks2 = _interopRequireDefault(_blocks);
 
-var _gui = __webpack_require__(144);
+var _gui = __webpack_require__(151);
 
 var _gui2 = _interopRequireDefault(_gui);
 
-var _projectLoaderHoc = __webpack_require__(171);
+var _projectLoaderHoc = __webpack_require__(175);
 
 var _projectLoaderHoc2 = _interopRequireDefault(_projectLoaderHoc);
 
-var _blocksOnly = __webpack_require__(1349);
+var _blocksOnly = __webpack_require__(1360);
 
 var _blocksOnly2 = _interopRequireDefault(_blocksOnly);
 
@@ -72,11 +72,11 @@ _reactDom2.default.render(_react2.default.createElement(App, null), appTarget);
 
 /***/ }),
 
-/***/ 1349:
+/***/ 1360:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(1350);
+var content = __webpack_require__(1361);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -95,8 +95,8 @@ var update = __webpack_require__(10)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??postcss!./blocks-only.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??postcss!./blocks-only.css");
+	module.hot.accept("!!../../node_modules/_css-loader@0.28.11@css-loader/index.js??ref--1-1!../../node_modules/_postcss-loader@2.1.6@postcss-loader/lib/index.js??postcss!./blocks-only.css", function() {
+		var newContent = require("!!../../node_modules/_css-loader@0.28.11@css-loader/index.js??ref--1-1!../../node_modules/_postcss-loader@2.1.6@postcss-loader/lib/index.js??postcss!./blocks-only.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -123,7 +123,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 1350:
+/***/ 1361:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(false);
@@ -140,5 +140,5 @@ exports.locals = {
 
 /***/ })
 
-},[1348]);
+},[1359]);
 //# sourceMappingURL=blocksonly.js.map

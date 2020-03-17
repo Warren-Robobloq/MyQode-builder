@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 1352:
+/***/ 1363:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34,21 +34,21 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(54);
+var _reactDom = __webpack_require__(55);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRedux = __webpack_require__(13);
 
-var _appStateHoc = __webpack_require__(138);
+var _appStateHoc = __webpack_require__(145);
 
 var _appStateHoc2 = _interopRequireDefault(_appStateHoc);
 
-var _controls = __webpack_require__(150);
+var _controls = __webpack_require__(156);
 
 var _controls2 = _interopRequireDefault(_controls);
 
-var _stage = __webpack_require__(216);
+var _stage = __webpack_require__(217);
 
 var _stage2 = _interopRequireDefault(_stage);
 
@@ -56,15 +56,15 @@ var _box = __webpack_require__(18);
 
 var _box2 = _interopRequireDefault(_box);
 
-var _gui = __webpack_require__(144);
+var _gui = __webpack_require__(151);
 
 var _gui2 = _interopRequireDefault(_gui);
 
-var _projectLoaderHoc = __webpack_require__(171);
+var _projectLoaderHoc = __webpack_require__(175);
 
 var _projectLoaderHoc2 = _interopRequireDefault(_projectLoaderHoc);
 
-__webpack_require__(1353);
+__webpack_require__(1364);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -157,11 +157,11 @@ _reactDom2.default.render(_react2.default.createElement(App, null), appTarget);
 
 /***/ }),
 
-/***/ 1353:
+/***/ 1364:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(1354);
+var content = __webpack_require__(1365);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -180,8 +180,8 @@ var update = __webpack_require__(10)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??postcss!./player.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??postcss!./player.css");
+	module.hot.accept("!!../../node_modules/_css-loader@0.28.11@css-loader/index.js??ref--1-1!../../node_modules/_postcss-loader@2.1.6@postcss-loader/lib/index.js??postcss!./player.css", function() {
+		var newContent = require("!!../../node_modules/_css-loader@0.28.11@css-loader/index.js??ref--1-1!../../node_modules/_postcss-loader@2.1.6@postcss-loader/lib/index.js??postcss!./player.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -208,7 +208,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 1354:
+/***/ 1365:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(false);
@@ -223,5 +223,5 @@ exports.push([module.i, "body {\n    padding: 0;\n    margin: 0;\n}\n", ""]);
 
 /***/ })
 
-},[1352]);
+},[1363]);
 //# sourceMappingURL=player.js.map
