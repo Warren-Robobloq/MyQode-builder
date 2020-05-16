@@ -41,6 +41,16 @@
 #include "RB_FLAMESENSOR.h"
 #include "RB_GASSENSOR.h"
 #include "RB_POTENTIOMETER.h"
+#include "RB_LINEPOTENTIOMETER.h"
+#include "RB_FAN.h"
+
+
+
+
+
+    
+
+
 
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)    //Qoooers
 #include "RB_ENCONDERMOTOR.h" 
@@ -59,6 +69,7 @@
  #define Remote_Control_Mode               0X00      //遥控模式
  #define Ultrasonic_Mode                   0X01      //超声波蔽障模式
  #define Line_Follower_Mode                0x02      //巡线模式
+ 
 
 
 
@@ -69,9 +80,9 @@
  *  Hardware Information
  */
 
-#define DeviceType                            0x02          //设备类型   K2
-#define HardwareVersion                       0x01          //硬件版本
-#define SoftwareVersion                       0x08          //软件版本
+#define DeviceType                            2          //设备类型   K2
+#define HardwareVersion                       1          //硬件版本
+#define SoftwareVersion                       8          //软件版本
 
 
 /*
@@ -80,11 +91,11 @@
 
  #define Remote_Control_Mode               0X00           //遥控模式
  #define Ultrasonic_Mode                   0X01           //超声波蔽障模式
- #define Line_Follower_Mode                0x02          //巡线模式
- #define Dinosaur_Ultrasonic_Mode         0x03          //恐龙模式蔽障模式
- #define Alligator_Ultrasonic_Mode         0x04          //鳄鱼传统蔽障模式
-
-
+ #define Line_Follower_Mode                0x02           //巡线模式
+ #define Dinosaur_Ultrasonic_Mode          0x03           //恐龙模式蔽障模式
+ #define Alligator_Ultrasonic_Mode         0x04           //鳄鱼传统蔽障模式
+ #define Scan_Mode                         0X10           //扫描避障模式
+ #define SearchLight_Mode                  0X11           //扫描避障模式
 
 #endif
 /*
@@ -112,6 +123,7 @@
 #define   TouchSensor_Set                     0x1D          //触摸传感器主动上报设置
 #define   DigitalDisplay_Set                  0x1E          //4段数码管显示设置
 #define   RGBLEDArray_Set                     0x1F          //4个RGBLED显示设置
+#define   FAN_Set                             0X20          //设置风扇
 
 
 
@@ -128,19 +140,11 @@
 #define   TouchSensor_Read                    0XAB          //触摸传感器读取
 #define   TemptureSensors_Read                0XAC          //2路温度传感读取
 #define   Line_Follower_Array_Read            0XAD          //6路巡线传感器读取
-
-
-
 #define   JoyStickSensor_Read                 0XAE          //遥感读取
 #define   FlameSensor_Read                    0XAF          //火焰读取
 #define   GasSensor_Read                      0XB0          //气体读取      
 #define   Potentimeter_Read                   0XB1          //电位器读取
-
-
-
-
- 
- 
+#define   LinePotentimeter_Read               0XB2          //滑动电位器读取
 
 
 

@@ -28,7 +28,7 @@ uint16_t RB_GASSENSOR::GetGas(void)
 {
 	
 	 pinMode(_SigPin,INPUT);
-	 uint16_t value = 1024-analogRead(_SigPin);
+	 uint16_t value = analogRead(_SigPin);
 	 return value;
 }
 

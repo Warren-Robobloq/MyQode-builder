@@ -9,7 +9,7 @@ var LOCAL ={};
 var SY ={};
 SY.Client = 'pc';
 SEP.os ={};
-SEP.os.version = "1.3.8" ; //version
+SEP.os.version = "1.3.9"; //version
 SEP.os.type = 1 ; // electron:1 ; web: 2; PC调用 GO接口： 3；（自动修正值，不用改）
 
 SEP.appInit = function () {

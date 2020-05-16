@@ -30,7 +30,7 @@ uint16_t RB_FLAMESENSOR::GetFlameAnalog(void)
 {
 	
 	 pinMode(_SigPin_Analog,INPUT);
-	 uint16_t value = analogRead(_SigPin_Analog);
+	 uint16_t value = 1023-analogRead(_SigPin_Analog);
 	 return value;
 }
 

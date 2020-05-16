@@ -10,9 +10,9 @@
 
 #include "RB_PORT.h" 
 
-#define CENTER_VALUE    (490)
-
-
+#define CENTER_VALUE_X    (720)
+#define CENTER_VALUE_Y    (720)
+#define CENTER_VALUE      (720)
 class RB_JOYSTICK:public RB_Port
 {
 	public:

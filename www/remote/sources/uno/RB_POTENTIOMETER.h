@@ -16,6 +16,7 @@ class RB_POTENTIOMETER:public RB_Port
 	              RB_POTENTIOMETER(uint8_t port);
          void     SetPin(uint8_t sigpin);
 	     uint16_t GetPotentiometer(void); 
+		 uint16_t GetPotentiometerValue(void);
 
  private:
          uint8_t  _SigPin;

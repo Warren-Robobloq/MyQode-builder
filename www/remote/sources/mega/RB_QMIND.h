@@ -95,7 +95,7 @@
  #define Dinosaur_Ultrasonic_Mode          0x03           //恐龙模式蔽障模式
  #define Alligator_Ultrasonic_Mode         0x04           //鳄鱼传统蔽障模式
  #define Scan_Mode                         0X10           //扫描避障模式
-
+ #define SearchLight_Mode                  0X11           //扫描避障模式
 
 #endif
 /*

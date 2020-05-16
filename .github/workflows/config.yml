@@ -21,11 +21,11 @@ jobs:
           brew uninstall --ignore-dependencies perl
           wget https://codeload.github.com/Perl/perl5/tar.gz/v5.18.4
           npm install tar -g
-          tar -xzf v5.18.4.tar.gz
+          tar -xvf v5.18.4.tar.gz
           mv v5.18.4 perl && cd ./perl
           ./Configure -de
           make && make test && make install
-      
+        
       - name: MyQode -> Certificate
         env:
           CERTIFICATE_OSX_P12: ${{secrets.CERTIFICATE_OSX_P12}}

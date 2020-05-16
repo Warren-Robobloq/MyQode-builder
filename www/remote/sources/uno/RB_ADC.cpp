@@ -166,12 +166,12 @@ uint16_t  RB_ADC::ADC_Read(void)
 		} 
 		adc_sum = adc_sum- valuemax-valuemin;
         value = adc_sum/8;
-		if(value>1010) 
+		if(value>1015) 
 			 return 0;
+		 else if(value>990)
+            return Touch_Sensor;
         else if(value>970)
-            return RGBLED_Array_Device;
-        else if(value>950)
-            return Other_Device;    
+            return RGBLED_Array_Device;   
         else if(value>930)
             return RGBLED_Matraix;
         else if(value>900) 
@@ -205,7 +205,7 @@ uint16_t  RB_ADC::ADC_Read(void)
         else if(value>379)
             return Light_Sensor;
         else if(value>345)
-            return Other_Device;
+            return Gas_Sensor;
         else if(value>305)
             return DigitalDisplay_Device;
         else if(value>270)
@@ -213,9 +213,9 @@ uint16_t  RB_ADC::ADC_Read(void)
         else if(value>207)
             return Line_Follower_Sensor;
         else if(value>164)
-            return Other_Device;
+            return Fan_Divice;
         else if(value>121)
-            return Other_Device;
+            return Line_Potentimeter_Sensor;
         else if(value>78)
             return Other_Device;
         else if(value>35)

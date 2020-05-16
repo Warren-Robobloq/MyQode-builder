@@ -168,7 +168,7 @@ uint16_t  RB_ADC::ADC_Read(void)
         value = adc_sum/8;
 		if(value>1015) 
 			 return 0;
-		 else if(value>1000)
+		 else if(value>990)
             return Touch_Sensor;
         else if(value>970)
             return RGBLED_Array_Device;   
@@ -205,7 +205,7 @@ uint16_t  RB_ADC::ADC_Read(void)
         else if(value>379)
             return Light_Sensor;
         else if(value>345)
-            return Other_Device;
+            return Gas_Sensor;
         else if(value>305)
             return DigitalDisplay_Device;
         else if(value>270)
