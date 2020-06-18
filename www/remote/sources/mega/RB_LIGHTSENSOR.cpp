@@ -24,7 +24,7 @@ uint16_t RB_LightSensor::GetLight(void)
 {
 	
 	 pinMode(_SigPin,INPUT);
-	 uint16_t value = 1024-analogRead(_SigPin);
+	 uint16_t value = 1023-analogRead(_SigPin);
 	 return value;
 }
 uint16_t  RB_LightSensor::  GetLightValue(void)

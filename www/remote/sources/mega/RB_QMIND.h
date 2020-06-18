@@ -43,7 +43,7 @@
 #include "RB_POTENTIOMETER.h"
 #include "RB_LINEPOTENTIOMETER.h"
 #include "RB_FAN.h"
-
+#include "RB_LINEFOLLOWARRAY.h"
 
 
 

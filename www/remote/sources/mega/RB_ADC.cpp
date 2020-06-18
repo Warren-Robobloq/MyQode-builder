@@ -196,8 +196,8 @@ uint16_t  RB_ADC::ADC_Read(void)
             return LED_Matraix_Blue;
 		else if(value>480)
 			return JoyStick_Sensor;
-        else if(value>465)
-            return Other_Device;
+        else if(value>450)
+            return Line_Follower_Array_Sensors;
         else if(value>422)
             return Potentimeter_Sensor;
 		else if(value>405)
