@@ -1,0 +1,34 @@
+name: Build MyQode
+on: push
+jobs:
+  build-windows:
+    runs-on: windows-2016
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js Version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '8.x'
+
+      - name: Setup custom environment variables
+        shell: bash
+        run: |
+          echo ::set-env name=BUILD_NUMBER::"MyQode-Windows-`date '+%m%d'`-$GITHUB_RUN_NUMBER"
+
+      - name: MyQode -> Install
+        shell: powershell
+        run: |
+          npm install -g electron-builder@20.23.1
+          npm install
+
+      - name: MyQode -> Build/release
+        shell: cmd
+        run: |
+          npx electron-builder
+
+      - name: Upload to Aliyun OSS
+        shell: cmd
+        run: |
+          curl https://static-hk-robobloq.oss-cn-hongkong.aliyuncs.com/certificate/q-release.exe -o q-release.exe
+          7z a -tzip %BUILD_NUMBER%.zip .\releases\*.*
+          q-release.exe upload %BUILD_NUMBER%.zip
