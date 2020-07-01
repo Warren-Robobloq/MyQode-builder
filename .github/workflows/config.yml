@@ -14,6 +14,8 @@ jobs:
         shell: bash
         run: |
           echo ::set-env name=BUILD_NUMBER::"MyQode-Windows-`date '+%m%d'`-$GITHUB_RUN_NUMBER"
+          echo ::set-env name=CSC_LINK::"${{secrets.CSC_LINK}}"
+          echo ::set-env name=CSC_KEY_PASSWORD:: "${{secrets.CSC_KEY_PASSWORD}}"
 
       - name: MyQode -> Install
         shell: powershell
