@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1375:
+/***/ 1377:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36,7 +36,7 @@ var _projectLoaderHoc = __webpack_require__(172);
 
 var _projectLoaderHoc2 = _interopRequireDefault(_projectLoaderHoc);
 
-var _blocksOnly = __webpack_require__(1376);
+var _blocksOnly = __webpack_require__(1378);
 
 var _blocksOnly2 = _interopRequireDefault(_blocksOnly);
 
@@ -72,11 +72,11 @@ _reactDom2.default.render(_react2.default.createElement(App, null), appTarget);
 
 /***/ }),
 
-/***/ 1376:
+/***/ 1378:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(1377);
+var content = __webpack_require__(1379);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -123,7 +123,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 1377:
+/***/ 1379:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(9)(false);
@@ -140,5 +140,5 @@ exports.locals = {
 
 /***/ })
 
-},[1375]);
+},[1377]);
 //# sourceMappingURL=blocksonly.js.map
