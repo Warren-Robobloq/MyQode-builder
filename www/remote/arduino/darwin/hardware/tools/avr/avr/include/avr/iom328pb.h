@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Copyright (C) 2017 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (C) 2020 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
  * All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -214,11 +214,13 @@
 #define TOV3    0
 #define OCF3A   1
 #define OCF3B   2
+#define ICF3    5
 
 #define TIFR4   _SFR_IO8(0x19)
 #define TOV4    0
 #define OCF4A   1
 #define OCF4B   2
+#define ICF4    5
 
 /* Reserved [0x1A] */
 
@@ -549,6 +551,8 @@
 #define ADC3D   3
 #define ADC4D   4
 #define ADC5D   5
+#define ADC6D   6
+#define ADC7D   7
 
 #define DIDR1   _SFR_MEM8(0x7F)
 #define AIN0D   0
@@ -1109,21 +1113,44 @@
 #define TIMER4_OVF_vect            _VECTOR(44)
 #define TIMER4_OVF_vect_num        44
 
-#define _VECTORS_SIZE 180
+#if (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#  define _VECTORS_SIZE 180
+#else
+#  define _VECTORS_SIZE 180U
+#endif
 
 
 /* Constants */
 
-#define SPM_PAGESIZE 128
-#define FLASHSTART   0x0000
-#define FLASHEND     0x7FFF
-#define RAMSTART     0x0100
-#define RAMSIZE      2048
-#define RAMEND       0x08FF
-#define E2START     0
-#define E2SIZE      1024
-#define E2PAGESIZE  4
-#define E2END       0x03FF
+#if (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#  define SPM_PAGESIZE 128
+#  define FLASHSTART   0x0000
+#  define FLASHEND     0x7FFF
+#else
+#  define SPM_PAGESIZE 128U
+#  define FLASHSTART   0x0000U
+#  define FLASHEND     0x7FFFU
+#endif
+#if (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#  define RAMSTART     0x0100
+#  define RAMSIZE      2048
+#  define RAMEND       0x08FF
+#else
+#  define RAMSTART     0x0100U
+#  define RAMSIZE      2048U
+#  define RAMEND       0x08FFU
+#endif
+#if (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#  define E2START     0
+#  define E2SIZE      1024
+#  define E2PAGESIZE  4
+#  define E2END       0x03FF
+#else
+#  define E2START     0U
+#  define E2SIZE      1024U
+#  define E2PAGESIZE  4U
+#  define E2END       0x03FFU
+#endif
 #define XRAMEND      RAMEND
 
 
