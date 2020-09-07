@@ -154,7 +154,7 @@ var _reactDom = __webpack_require__(55);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactModal = __webpack_require__(80);
+var _reactModal = __webpack_require__(81);
 
 var _reactModal2 = _interopRequireDefault(_reactModal);
 
