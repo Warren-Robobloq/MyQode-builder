@@ -8,7 +8,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://static.robobloq.cn/apps/pc/"
+        "url": "https://static.robobloq.cn/apps/pc/"
       }
     ],
     "appId": "com.robobloq.pc",
