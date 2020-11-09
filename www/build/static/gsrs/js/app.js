@@ -60,7 +60,6 @@ SEP.initOther =function() {
     class MyEmitter extends EventEmitter {};
     SEP.Node.process = process;
     SEP.Node.fs = require('fs');
-    SEP.Node.path = require('path');
     SEP.Node.http = require('http');
     SEP.Node.exec = require("child_process").exec;
     SEP.Node.execSync = require("child_process").execSync;
