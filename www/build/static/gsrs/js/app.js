@@ -61,6 +61,7 @@ SEP.initOther =function() {
     SEP.Node.process = process;
     SEP.Node.fs = require('fs');
     SEP.Node.http = require('http');
+    SEP.Node.path = require('path');
     SEP.Node.exec = require("child_process").exec;
     SEP.Node.execSync = require("child_process").execSync;
     SEP.Node.spawn = require("child_process").spawn;
