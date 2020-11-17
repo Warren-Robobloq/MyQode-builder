@@ -13,9 +13,9 @@ jobs:
       - name: Setup custom environment variables
         shell: bash
         run: |
-          echo ::set-env name=BUILD_NUMBER::"MyQode-Windows-`date '+%m%d'`-$GITHUB_RUN_NUMBER"
-          echo ::set-env name=CSC_LINK::"${{secrets.CSC_LINK}}"
-          echo ::set-env name=CSC_KEY_PASSWORD:: "${{secrets.CSC_KEY_PASSWORD}}"
+          echo "BUILD_NUMBER=MyQode-Windows-`date '+%m%d'-$GITHUB_RUN_NUMBER`" >> $GITHUB_ENV
+          echo "CSC_LINK=${{secrets.CSC_LINK}}" >> $GITHUB_ENV
+          echo "CSC_KEY_PASSWORD=${{secrets.CSC_KEY_PASSWORD}}" >> $GITHUB_ENV
 
       - name: MyQode -> Install
         shell: powershell
