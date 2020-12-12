@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 1365:
+/***/ 1381:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40,11 +40,11 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRedux = __webpack_require__(13);
 
-var _appStateHoc = __webpack_require__(144);
+var _appStateHoc = __webpack_require__(140);
 
 var _appStateHoc2 = _interopRequireDefault(_appStateHoc);
 
-var _controls = __webpack_require__(155);
+var _controls = __webpack_require__(151);
 
 var _controls2 = _interopRequireDefault(_controls);
 
@@ -56,15 +56,15 @@ var _box = __webpack_require__(18);
 
 var _box2 = _interopRequireDefault(_box);
 
-var _gui = __webpack_require__(150);
+var _gui = __webpack_require__(146);
 
 var _gui2 = _interopRequireDefault(_gui);
 
-var _projectLoaderHoc = __webpack_require__(174);
+var _projectLoaderHoc = __webpack_require__(172);
 
 var _projectLoaderHoc2 = _interopRequireDefault(_projectLoaderHoc);
 
-__webpack_require__(1366);
+__webpack_require__(1382);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -157,11 +157,11 @@ _reactDom2.default.render(_react2.default.createElement(App, null), appTarget);
 
 /***/ }),
 
-/***/ 1366:
+/***/ 1382:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(1367);
+var content = __webpack_require__(1383);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -175,7 +175,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(11)(content, options);
+var update = __webpack_require__(10)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -208,10 +208,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 1367:
+/***/ 1383:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(9)(false);
 // imports
 
 
@@ -223,5 +223,5 @@ exports.push([module.i, "body {\n    padding: 0;\n    margin: 0;\n}\n", ""]);
 
 /***/ })
 
-},[1365]);
+},[1381]);
 //# sourceMappingURL=player.js.map
