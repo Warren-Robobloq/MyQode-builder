@@ -288,6 +288,10 @@ if (!_tcs34725Initialised) begin();
       }
       return white;
   }
+
+
+
+  #if 0
   unsigned char RB_COLORSENSOR::GetColor(void)
   {
     uint16_t  red,green,blue,white;
@@ -356,6 +360,43 @@ if (!_tcs34725Initialised) begin();
 	  }
        return 0;
     }
+#endif
+
+
+  unsigned char RB_COLORSENSOR::GetColor(void)
+  {
+    uint16_t  red,green,blue,white;
+    float red_white,green_white,blue_white;
+    int16_t delta_red_green,delta_green_blue,delta_red_blue;
+    uint16_t  color_value=0;	
+
+    getRawData(&red,&green,&blue,&white);
+
+    red_white = (float)red/(float)white;
+    green_white = (float)green/(float)white;
+    blue_white = (float)blue/(float)white;
+
+    delta_red_green = red - green;
+    delta_green_blue = green - blue;
+    delta_red_blue = red - blue;
+
+    if((red_white>0.22)&&(green_white<0.35)&&(blue_white>0.38))  // 优化范围
+      color_value = 5;  // 紫色
+    if((red_white>0.4)&&(green_white<0.3)&&(blue_white<0.3))  // 优化范围
+      color_value = 1;  // red
+    if((red_white<0.3)&&(green_white>0.4)&&(blue_white<0.3))  // 优化范围
+      color_value = 2;  // green
+    if((red_white<0.2)&&(green_white<0.4)&&(blue_white>0.45))  // 优化范围
+      color_value = 3;  // blue
+    if((red_white>0.35)&&(green_white>0.35)&&(blue_white<0.22))  // 优化范围
+      color_value = 4;  // yellow
+    if((red>120)&&(green>120)&&(blue>120)&&(white>400)&&(abs(delta_red_green)<70)&&(abs(delta_green_blue)<70)&&(abs(delta_red_blue)<70)) //优化范围
+      color_value = 6;  // white
+
+    return color_value;
+  }
+
+
 
    unsigned char RB_COLORSENSOR::GetColor_Game(void)
   {
