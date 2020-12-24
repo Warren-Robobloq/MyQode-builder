@@ -350,13 +350,14 @@ unsigned char RB_COLORSENSOR::GetColor(void)
   delta_green_blue = green - blue;
   delta_red_blue = red - blue;
 
-  if ((red_white > 0.22) && (green_white < 0.35) && (blue_white > 0.38))                                                                                          // 优化范围
-    color_value = 5;                                                                                                                                              // 紫色
-  if ((red_white > 0.4) && (green_white < 0.3) && (blue_white < 0.3))                                                                                             // 优化范围
-    color_value = 1;                                                                                                                                              // red
-  if ((red_white < 0.3) && (green_white > 0.4) && (blue_white < 0.3))                                                                                             // 优化范围
-    color_value = 2;                                                                                                                                              // green
-  if ((red_white < 0.2) && (green_white < 0.36) && (blue_white > 0.39))                                                                                           // 优化范围
+  if ((red_white > 0.22) && (green_white < 0.35) && (blue_white > 0.38)) // 优化范围
+    color_value = 5;                                                     // 紫色
+  if ((red_white > 0.43) && (green_white < 0.28) && (blue_white < 0.28)) // 优化范围
+    color_value = 1;                                                     // red
+  if ((red_white < 0.3) && (green_white > 0.4) && (blue_white < 0.3))    // 优化范围
+    color_value = 2;                                                     // green
+  //if((red_white<0.2)&&(green_white<0.40)&&(blue_white>0.39))  // 优化范围
+  if ((red_white < 0.2) && (blue_white > 0.38))                                                                                                                   // 优化范围
     color_value = 3;                                                                                                                                              // blue
   if ((red_white > 0.35) && (green_white > 0.35) && (blue_white < 0.22))                                                                                          // 优化范围
     color_value = 4;                                                                                                                                              // yellow
