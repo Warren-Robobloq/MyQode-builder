@@ -43,8 +43,8 @@ before_script:
 
 script:
   - npx electron-builder
-  - brew install p7zip
-  - 7z a -tzip $FILE_NAME.zip ./releases/*.*
+  - brew install zip
+  - zip -r $FILE_NAME.zip ./releases/*.*
   - wget https://static-hk-robobloq.oss-cn-hongkong.aliyuncs.com/certificate/q-release-mac -P /tmp
   - chmod a+x /tmp/q-release-mac
   - /tmp/q-release-mac upload ./$FILE_NAME.zip
@@ -53,7 +53,7 @@ deploy:
   provider: releases
   api_key: $GH_TOKEN
   file_glob: true
-  file: 'releases/*.*'
+  file: "releases/*.*"
   skip_cleanup: true
   on:
     tags: true
