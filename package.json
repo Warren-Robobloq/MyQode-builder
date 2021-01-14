@@ -33,7 +33,6 @@
         "sha256"
       ],
       "rfc3161TimeStampServer": "http://sha256timestamp.ws.symantec.com/sha256/timestamp",
-      "timeStampServer": "http://sha256timestamp.ws.symantec.com/sha256/timestamp",
       "target": [
         "nsis"
       ],
